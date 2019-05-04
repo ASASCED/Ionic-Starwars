@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" defaulHref="/llamadas">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ personaje.nombre }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding text-center>
+
+    <img class="avatar" [src]="personaje.img" text-center>
+    <br>
+    <ion-label class="nombre">{{ personaje.nombre }}</ion-label>
+    <ion-card-subtitle>{{ personaje.titulo }}</ion-card-subtitle>
+    <br>
+    <ion-button expand="full" color="dark" [routerLink]="['/llamadas']">
+        REGRESAR
+    </ion-button>
+
+</ion-content>

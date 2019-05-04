@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-title>llamadas</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item *ngFor="let personaje of PERSONAJES; let idx = index" (click)="irDetalles(idx)">
+            <ion-avatar slot="start">
+                <ion-img [src]="personaje.img"></ion-img>
+            </ion-avatar>
+            <ion-label>{{ personaje.nombre }}</ion-label>
+            <ion-card-subtitle>{{ personaje.titulo }}</ion-card-subtitle>
+        </ion-item>
+    </ion-list>
+
+</ion-content>
